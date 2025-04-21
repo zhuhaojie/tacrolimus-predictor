@@ -126,7 +126,10 @@ except FileNotFoundError:
 # Input form
 st.header("Patient Information")
 
-target_trough = st.number_input("Target Trough Concentration (ng/mL)", min_value=0.0, max_value=30.0, value=10.0)
+st.markdown("### Target Trough Concentration (ng/mL)")
+target_trough = st.number_input("", min_value=0.0, max_value=30.0, value=10.0)
+
+#target_trough = st.number_input("Target Trough Concentration (ng/mL)", min_value=0.0, max_value=30.0, value=10.0)
 
 with st.form("patient_form"):
     st.markdown("### Required Fields")

@@ -318,10 +318,10 @@ if submitted:
     # Display with red and bold formatting
     st.markdown(f"""
     <div style='color: red; font-weight: bold;'>
-    Recommended Daily Dose for Target Trough {target_trough:.1f} ng/mL: {recommended_dose:.2f} mg
+    Recommended Tacrolimus Daily Dose for Target Trough {target_trough:.1f} ng/mL: {recommended_dose:.2f} mg
     </div>
     <div style='color: red; font-weight: bold;'>
-    Predicted Trough/Dose Ratio: {pred:.2f} (ng/ml per mg)
+    Predicted Tacrolimus Trough/Dose Ratio: {pred:.2f} (ng/ml per mg)
     </div>
     """, unsafe_allow_html=True)
     

@@ -137,7 +137,7 @@ with st.form("patient_form"):
     col1, col2 = st.columns(2)
     
     with col1:
-        age = st.number_input("Age (years)*", min_value=18, max_value=120)
+        age = st.number_input("Age (years)*", min_value=18, max_value=120, value=55)
         
         race_options = [
             {"display": "European", "value": "C"},
@@ -149,12 +149,12 @@ with st.form("patient_form"):
             options=race_options,
             format_func=lambda x: x["display"]
         )
-        hct = st.number_input("Hematocrit (hct, %)*", min_value=15.0, max_value=80.0)
+        hct = st.number_input("Hematocrit (hct, %)*", min_value=15.0, max_value=80.0, value=35.0)
     
     with col2:
-        prev_dose = st.number_input("Previous Daily Dose (mg)*", min_value=0.5, max_value=50.0)
-        prev_c_whole = st.number_input("Previous Trough Concentration (ng/ml)*", min_value=0.5, max_value=150.0)
-        hours_after_transplant = st.number_input("Time Post-transplant (hour)*", min_value=12.0, max_value=168.0)
+        prev_dose = st.number_input("Previous Daily Dose (mg)*", min_value=0.5, max_value=50.0, value=8.0)
+        prev_c_whole = st.number_input("Previous Trough Concentration (ng/ml)*", min_value=0.5, max_value=150.0, value=8.0)
+        hours_after_transplant = st.number_input("Time Post-transplant (hour)*", min_value=12.0, max_value=168.0, value=72.0)
         
     st.markdown("### Optional Fields")
     col4, col5 = st.columns(2)

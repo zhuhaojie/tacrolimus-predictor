@@ -127,7 +127,7 @@ except FileNotFoundError:
 st.header("Patient Information")
 
 st.markdown("### Target Trough Concentration (ng/mL)")
-target_trough = st.number_input("", min_value=0.0, max_value=30.0, value=10.0)
+target_trough = st.number_input("", min_value=0.0, max_value=30.0, value=10.0, format="%.1f")
 
 #target_trough = st.number_input("Target Trough Concentration (ng/mL)", min_value=0.0, max_value=30.0, value=10.0, format="%.1f")
 

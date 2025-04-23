@@ -217,11 +217,11 @@ with st.form("patient_form"):
     
     with col6:
         alb = st.number_input("Albumin (alb, g/dL)", min_value=0.0, value=4.0, format="%.1f", step=0.1)
-        alt = st.number_input("ALT (U/L)", min_value=0.0, value=20.0, format="%.1f", step=0.1)
-        ast = st.number_input("AST (U/L)", min_value=0.0, value=20.0, format="%.1f", step=0.1)
+        alt = st.number_input("ALT (U/L)", min_value=0.0, value=20.0, format="%.1f", step=1)
+        ast = st.number_input("AST (U/L)", min_value=0.0, value=20.0, format="%.1f", step=1)
     
     with col7:
-        creat = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.0, format="%.1f", step=0.1)
+        creat = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.0, format="%.2f", step=0.01)
         cyp3a_inhibitor = st.checkbox("CYP3A Inhibitor Present")
         cyp3a_inducer = st.checkbox("CYP3A Inducer Present")
     

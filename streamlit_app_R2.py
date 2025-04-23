@@ -337,5 +337,5 @@ st.sidebar.header("About")
 st.sidebar.markdown("""
 This app uses an XGBoost model trained on data from 1,624 patients to predict tacrolimus trough-to-dose ratios within the first week after a kidney transplant.
 The model considers patient demographics, lab results, previous dosing history, and genetic factors (e.g., CYP3A5 and CYP3A4 genotypes).
-The predicted ratio is used to determine the appropriate dose to achieve a target tacrolimus trough concentration.
+The predicted ratio is then used to determine the appropriate dose to achieve a predefined target tacrolimus trough concentration.
 """)

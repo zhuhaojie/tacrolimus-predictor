@@ -223,7 +223,7 @@ with st.form("patient_form"):
     with col7:
         creat = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.0)
         cyp3a_inhibitor = st.checkbox("CYP3A Inhibitor Present")
-        #cyp3a_inducer = st.checkbox("CYP3A Inducer Present")
+        cyp3a_inducer = st.checkbox("CYP3A Inducer Present")
     
     submitted = st.form_submit_button("Predict")
 
@@ -284,7 +284,7 @@ if submitted:
         'ast': ast,
         'creat': creat,
         'CYP3A_inhibitor': 1 if cyp3a_inhibitor else 0,
-        #'CYP3A_inducer': 1 if cyp3a_inducer else 0,
+        'CYP3A_inducer': 1 if cyp3a_inducer else 0,
         'Tobacco_Use': tobacco_selected["value"],
         'Alcohol_Use': alcohol_selected["value"],
         # Add previous trough_dose_ratio (calculated from prev_C_whole / prev_Dose if dose > 0)

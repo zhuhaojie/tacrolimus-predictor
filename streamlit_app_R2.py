@@ -152,16 +152,16 @@ with st.form("patient_form"):
         hct = st.number_input("Hematocrit (hct, %)*", min_value=15.0, max_value=80.0, value=35.0)
     
     with col2:
-        prev_dose = st.number_input("Previous Daily Dose (mg)*", min_value=0.5, max_value=50.0, value=8.0)
-        prev_c_whole = st.number_input("Previous Trough Concentration (ng/ml)*", min_value=0.5, max_value=150.0, value=8.0)
-        hours_after_transplant = st.number_input("Time Post-transplant (hour)*", min_value=12.0, max_value=168.0, value=72.0)
+        prev_dose = st.number_input("Previous Daily Dose (mg)*", min_value=0.5, max_value=50.0, value=8.0, format="%.1f", step=0.1)
+        prev_c_whole = st.number_input("Previous Trough Concentration (ng/ml)*", min_value=0.5, max_value=150.0, value=8.0, format="%.1f", step=0.1)
+        hours_after_transplant = st.number_input("Time Post-transplant (hour)*", min_value=12.0, max_value=168.0, value=72.0, format="%.1f", step=0.1)
         
     st.markdown("### Optional Fields")
     col4, col5 = st.columns(2)
     
     with col4:
-        weight = st.number_input("Weight (kg)", min_value=10.0, max_value=300.0, value=70.0)
-        height = st.number_input("Height (cm)", min_value=30.0, max_value=250.0, value=170.0)
+        weight = st.number_input("Weight (kg)", min_value=10.0, max_value=300.0, value=70.0, format="%.1f", step=0.1)
+        height = st.number_input("Height (cm)", min_value=30.0, max_value=250.0, value=170.0, format="%.1f", step=0.1)
         sex = st.selectbox("Sex", options=['M', 'F'])
         
         # Tobacco use options
@@ -216,12 +216,12 @@ with st.form("patient_form"):
     col6, col7 = st.columns(2)
     
     with col6:
-        alb = st.number_input("Albumin (alb, g/dL)", min_value=0.0, value=4.0)
-        alt = st.number_input("ALT (U/L)", min_value=0.0, value=20.0)
-        ast = st.number_input("AST (U/L)", min_value=0.0, value=20.0)
+        alb = st.number_input("Albumin (alb, g/dL)", min_value=0.0, value=4.0, format="%.1f", step=0.1)
+        alt = st.number_input("ALT (U/L)", min_value=0.0, value=20.0, format="%.1f", step=0.1)
+        ast = st.number_input("AST (U/L)", min_value=0.0, value=20.0, format="%.1f", step=0.1)
     
     with col7:
-        creat = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.0)
+        creat = st.number_input("Creatinine (mg/dL)", min_value=0.0, value=1.0, format="%.1f", step=0.1)
         cyp3a_inhibitor = st.checkbox("CYP3A Inhibitor Present")
         cyp3a_inducer = st.checkbox("CYP3A Inducer Present")
     
